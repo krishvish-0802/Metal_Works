@@ -11,7 +11,7 @@ export const Navbar = () => {
       alignItems="center"
     >
       <Box>
-        <Image src={Logo} width={"28"} height={"28"} alt="Sri Bharath Foundry Logo" />
+        <Image src={Logo} width={"24"} height={"24"} alt="Sri Bharath Foundry Logo" />
       </Box>
 
       <Box>
