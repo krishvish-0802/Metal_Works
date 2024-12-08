@@ -6,7 +6,7 @@ export const Navbar = () => {
     <Box
       as={"header"}
       paddingX={50}
-      paddingY={"2"}
+      height={"12vh"}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
