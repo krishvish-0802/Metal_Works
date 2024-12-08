@@ -1,23 +1,9 @@
-import { Box, Image, SimpleGrid, Span, Stack, Text } from "@chakra-ui/react";
+import { Image, SimpleGrid, Span, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import { PageHeading } from "./PageHeading";
 
 export const About = () => {
   return (
-    // <Stack flexDirection={"row"} gap={20}>
-    //   <Box width={50}></Box>
-    //   <Image src={SliderOne} alt="About Us" />
-    //   <Stack>
-    //     <PageHeading
-    //       heading={
-    //         <>
-    //           About <Span color={"yellow.300"}>Us</Span>
-    //         </>
-    //       }
-    //       description=""
-    //     />
-    //   </Stack>
-    // </Stack>
     <SimpleGrid
       pos={"relative"}
       zIndex={1}

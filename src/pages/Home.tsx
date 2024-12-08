@@ -3,6 +3,7 @@ import HomeSlider from "../components/HomeSlider";
 import { Navbar } from "../components/Navbar";
 import { Service } from "../components/Service";
 import { About } from "../components/About";
+import { ClientsCarousel } from "../components/ClientsCarousel";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HomeSlider />
       <About />
       <Service />
+      <ClientsCarousel />
       <Box height={"200vh"} />
     </>
   );
