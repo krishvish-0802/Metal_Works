@@ -3,10 +3,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Heading, Image, Span, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import SliderTwo from "../assets/images/slider-two.jpg";
 import SliderThree from "../assets/images/slider-three.jpg";
+import { ReactNode } from "react";
 
 export default function HomeSlider() {
   return (
@@ -16,44 +17,147 @@ export default function HomeSlider() {
       }}
       loop={true}
       navigation={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
       speed={2000}
       modules={[Navigation, Autoplay]}
       className="mySwiper"
     >
       <SwiperSlide>
-        <Box height={"100%"}>
-          <Image
-            src={SliderOne}
-            width={"100%"}
-            objectFit={"cover"}
-            alt="Metal Works"
-          />
-        </Box>
+        <SliderCard
+          heading={
+            <>
+              Welding <Span color={"yellow.300"}>&</Span> Iron Works
+            </>
+          }
+          description={
+            <>
+              WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+            </>
+          }
+          image={SliderOne}
+        />
+        {/* <Box
+          minHeight={"80vh"}
+          overflow={"hidden"}
+          pos={"relative"}
+          backgroundColor={"blackAlpha.100"}
+        >
+          <Box height={"100%"} pos={"absolute"} zIndex={-1} top={0} left={0}>
+            <Image
+              src={SliderOne}
+              width={"100%"}
+              objectFit={"cover"}
+              alt="Metal Works"
+            />
+          </Box>
+          <Stack
+            height={"100%"}
+            backgroundColor={"blackAlpha.500"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            gap={4}
+            p={4}
+          >
+            <Heading as="h2" color={"white"}>
+              Welding & Iron Works
+            </Heading>
+          </Stack>
+        </Box> */}
       </SwiperSlide>
       <SwiperSlide>
-        <Box height={"100%"}>
-          <Image
-            src={SliderTwo}
-            width={"100%"}
-            objectFit={"cover"}
-            alt="Metal Works 2"
-          />
-        </Box>
+        <SliderCard
+          heading={
+            <>
+              Welding <Span color={"yellow.300"}>&</Span> Iron Works
+            </>
+          }
+          description={
+            <>
+              WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+            </>
+          }
+          image={SliderTwo}
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Box height={"100%"}>
-          <Image
-            src={SliderThree}
-            width={"100%"}
-            objectFit={"cover"}
-            alt="Metal Works 3"
-          />
-        </Box>
+        <SliderCard
+          heading={
+            <>
+              Welding <Span color={"yellow.300"}>&</Span> Iron Works
+            </>
+          }
+          description={
+            <>
+              WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+            </>
+          }
+          image={SliderThree}
+        />
       </SwiperSlide>
     </Swiper>
   );
 }
+
+interface SliderCardProps {
+  heading: ReactNode;
+  description: ReactNode;
+  image: string;
+}
+
+export const SliderCard = ({
+  description,
+  heading,
+  image,
+}: SliderCardProps) => {
+  return (
+    <Box
+      height={"80vh"}
+      backgroundImage={`url(${image})`}
+      backgroundSize={"cover"}
+      pos={"relative"}
+      _before={{
+        content: `""`,
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "blackAlpha.600",
+        zIndex: 0,
+      }}
+    >
+      <Box
+        pos={"absolute"}
+        top={0}
+        left={0}
+        zIndex={-1}
+        height={"100%"}
+        backgroundColor={"blackAlpha.900"}
+      />
+      <Stack
+        pos={"relative"}
+        zIndex={1}
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"full"}
+        gap={12}
+        p={4}
+      >
+        <Heading as="h2" fontSize={"7xl"} color={"white"}>
+          {heading}
+        </Heading>
+        <Text
+          letterSpacing={20}
+          color={"white"}
+          fontSize={"lg"}
+          fontWeight={"semibold"}
+        >
+          {description}
+        </Text>
+      </Stack>
+    </Box>
+  );
+};
