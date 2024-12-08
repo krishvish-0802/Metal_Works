@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/navigation";
 import { Box, Heading, Span, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import SliderTwo from "../assets/images/slider-two.jpg";
-import SliderThree from "../assets/images/slider-three.jpg";
+// import SliderThree from "../assets/images/slider-three.jpg";
 import { ReactNode } from "react";
 
 export default function HomeSlider() {
@@ -28,12 +28,12 @@ export default function HomeSlider() {
         <SliderCard
           heading={
             <>
-              Welding <Span color={"yellow.300"}>&</Span> Iron Works
+              <Span color={"yellow.300"}>Shape</Span> Your Own <Span color={"yellow.300"}>Mold</Span>
             </>
           }
           description={
             <>
-              WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+              YOU IMAGINE, <Span color={"yellow.300"}>WE BUILD.</Span>
             </>
           }
           image={SliderOne}
@@ -70,18 +70,18 @@ export default function HomeSlider() {
         <SliderCard
           heading={
             <>
-              Welding <Span color={"yellow.300"}>&</Span> Iron Works
+              <Span color={"yellow.300"}>Casting</Span> Grey Cast <Span color={"yellow.300"}>Iron</Span>
             </>
           }
           description={
             <>
-              WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+              TOUGH, <Span color={"yellow.300"}>ROUGH CASTINGS</Span>
             </>
           }
           image={SliderTwo}
         />
       </SwiperSlide>
-      <SwiperSlide>
+      {/* <SwiperSlide>
         <SliderCard
           heading={
             <>
@@ -95,7 +95,7 @@ export default function HomeSlider() {
           }
           image={SliderThree}
         />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 }

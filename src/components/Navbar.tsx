@@ -1,6 +1,5 @@
-import { Box, Button, Image, Link } from "@chakra-ui/react";
-import Logo from "../assets/images/logo.jpg";
-
+import { Box, Button, Image, Link, Heading, Span } from "@chakra-ui/react";
+import Logo from "../assets/images/Swaraj Company Logo.png";
 export const Navbar = () => {
   return (
     <Box
@@ -12,8 +11,15 @@ export const Navbar = () => {
       alignItems="center"
     >
       <Box>
-        <Image src={Logo} width={"28"} height={"28"} alt="Metal Works" />
+        <Image src={Logo} width={"28"} height={"28"} alt="Sri Bharath Foundry Logo" />
       </Box>
+
+      <Box>
+        <Heading fontSize= "3xl">           
+          <Span color={"blue.800"}>SRI</Span> <Span color={"blue.800"}> BHARATH </Span> <Span color={"blue.800"}>FOUNDRY</Span>
+        </Heading>
+      </Box>
+
       <Box
         as="ul"
         display="flex"
@@ -51,3 +57,5 @@ export const Navbar = () => {
     </Box>
   );
 };
+
+

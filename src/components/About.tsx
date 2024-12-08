@@ -23,25 +23,23 @@ export const About = () => {
             </>
           }
           headingProps={{ fontSize: "5xl", color: "blackAlpha.900" }}
-          description="Name of the company"
+          description="Sri Bharath Foundry"
           descriptionProps={{ fontSize: "md", color: "blackAlpha.700" }}
         />
         <Stack gap={4}>
           <Text color={"blackAlpha.700"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+          Since our inception in 2020, Sri Bharath Foundry has been a trusted manufacturer of high-quality 
+          grey cast iron products. Specializing in precision engineering, we cater to industries with durable 
+          and reliable components, tailored to meet diverse operational needs. With a strong emphasis on 
+          craftsmanship, we ensure every product meets the highest standards of quality and performance, 
+          making us a preferred choice for industry leaders like Mahindra Pumps and Castwell.
           </Text>
           <Text color={"blackAlpha.700"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+          At <strong>Sri Bharath Foundry</strong>, our mission is to deliver exceptional value through innovative solutions 
+          and a commitment to customer satisfaction. By combining advanced manufacturing techniques with a 
+          customer-centric approach, we have established ourselves as a dependable partner. 
+          Whether it's pump brackets, hand tractor brackets, or other customized cast iron components, 
+          we stand dedicated to providing solutions that enhance efficiency and reliability.
           </Text>
         </Stack>
       </Stack>
