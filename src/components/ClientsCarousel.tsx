@@ -3,7 +3,13 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Box, Image, SimpleGrid, Stack } from "@chakra-ui/react";
-import SliderOne from "../assets/images/slider-one.jpg";
+import cri from "../assets/images/Clients/CRI.jpg";
+import kubota from "../assets/images/Clients/Kubota_Logo.png";
+import mahendra from "../assets/images/Clients/Mahendra_pumps.png";
+import zeeco from "../assets/images/Clients/Zeeco.svg";
+import karthic from "../assets/images/Clients/karthic_gears.jpg";
+import lubi from "../assets/images/Clients/lubipumps.svg";
+
 import { PageHeading } from "./PageHeading";
 
 export const ClientsCarousel = () => {
@@ -11,6 +17,8 @@ export const ClientsCarousel = () => {
     "ClientsCarousel",
     Array(10).map((_, index) => console.log("ClientsCarousel", index))
   );
+
+  const imagesArray = [cri, kubota, mahendra, zeeco, karthic, lubi]
   return (
     <Stack py={24}>
       <PageHeading
@@ -21,42 +29,56 @@ export const ClientsCarousel = () => {
       />
       <Swiper
         style={{
-          minHeight: "50vh",
+          minHeight: "50vh", width: "100%", marginTop: 100
         }}
         loop={true}
         navigation={true}
         autoplay={{
-          delay: 2500,
+          delay: 100,
           disableOnInteraction: false,
         }}
-        speed={2000}
+        speed={1000}
+        slidesPerView={4}
         modules={[Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <SimpleGrid
-            w={"85vw"}
-            mx={"auto"}
-            mt={20}
-            columns={[2, 5]}
-            justifyContent={"center"}
-            gap={14}
-          >
-            {Array(10)
-              .fill(0)
-              .map((_, index) => (
-                <Box key={index} h={32} w={32} bg="gray.100">
-                  <Image
-                    aspectRatio={1}
-                    height={"100%"}
-                    width={"100%"}
-                    src={SliderOne}
-                    alt="About Us"
-                  />
-                </Box>
-              ))}
-          </SimpleGrid>
-        </SwiperSlide>
+        {imagesArray.map((img)=>(
+        <SwiperSlide key={img}>
+          <Box h={32} w={32}>
+                <Image
+                  aspectRatio={1}
+                  height={"100%"}
+                  width={"100%"}
+                  src={img}
+                  alt="Client Company logo"
+                  objectFit={'contain'}
+                />
+              </Box>
+        {/* <SimpleGrid
+          w={"85vw"}
+          mx={"auto"}
+          mt={20}
+          columns={[2, 5]}
+          justifyContent={"center"}
+          gap={14}
+        >
+          {imagesArray
+            .map((image, index) => (
+              <Box key={index} h={32} w={32}>
+                <Image
+                  aspectRatio={1}
+                  height={"100%"}
+                  width={"100%"}
+                  src={image}
+                  alt="Client Company logo"
+                  objectFit={'contain'}
+                />
+              </Box>
+            ))}
+        </SimpleGrid> */}
+      </SwiperSlide>
+        ))}
+
       </Swiper>
     </Stack>
   );
