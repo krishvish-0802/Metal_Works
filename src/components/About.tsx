@@ -28,7 +28,7 @@ export const About = () => {
         />
         <Stack gap={4}>
           <Text color={"blackAlpha.700"}>
-          Since our inception in 2020, Sri Bharath Foundry has been a trusted manufacturer of high-quality 
+          Since our inception in 2020 at the pump city of India, Sri Bharath Foundry has been a trusted manufacturer of high-quality 
           grey cast iron products. Specializing in precision engineering, we cater to industries with durable 
           and reliable components, tailored to meet diverse operational needs. With a strong emphasis on 
           craftsmanship, we ensure every product meets the highest standards of quality and performance, 
