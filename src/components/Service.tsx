@@ -2,6 +2,9 @@ import { Box, Heading, SimpleGrid, Span, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import { PageHeading } from "./PageHeading";
 import { ReactNode } from "react";
+import cri from "../assets/images/Products/CI_gear_box.webp";
+
+const productArray = [cri, kubota, mahendra, zeeco, karthic, lubi]
 
 export const Service = () => {
   return (
