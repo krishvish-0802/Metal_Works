@@ -4,7 +4,7 @@ import { PageHeading } from "./PageHeading";
 
 export const About = () => {
   return (
-    <SimpleGrid
+    <SimpleGrid id="about"
       pos={"relative"}
       zIndex={1}
       columns={[1, 2]}

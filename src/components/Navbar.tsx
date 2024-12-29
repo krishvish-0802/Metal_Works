@@ -31,29 +31,26 @@ export const Navbar = () => {
         gap={4}
       >
         <Box as="li" paddingX={2}>
-          <Link as="a" href="/about" textDecoration="none" color="gray.600">
+          <Link as="a" href="#about" textDecoration="none" color="gray.600">
             About
           </Link>
         </Box>
         <Box as="li" paddingX={2}>
-          <Link as="a" href="/services" textDecoration="none" color="gray.600">
-            Services
-          </Link>
-        </Box>
-        <Box as="li" paddingX={2}>
-          <Link as="a" href="/products" textDecoration="none" color="gray.600">
+          <Link as="a" href="#products" textDecoration="none" color="gray.600">
             Products
           </Link>
         </Box>
         <Box as="li" paddingX={2}>
-          <Link as="a" href="/products" textDecoration="none" color="gray.600">
+          <Link as="a" href="#clients" textDecoration="none" color="gray.600">
             Clients
           </Link>
         </Box>
         <Box as="li" paddingX={2}>
-          <Button colorScheme="teal" variant="solid">
+        <Link as="a" href="#footer" textDecoration="none" color="gray.600">
+          <Button colorScheme="teal" variant="solid" >
             Contact
           </Button>
+        </Link>
         </Box>
       </Box>}
     </Box>

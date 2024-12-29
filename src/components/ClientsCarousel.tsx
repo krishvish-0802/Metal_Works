@@ -16,7 +16,7 @@ export const ClientsCarousel = () => {
   const isMobile = useBreakpointValue({base:true, md:false})
   const imagesArray = [cri, kubota, mahendra, zeeco, karthic, lubi]
   return (
-    <Stack py={{base: 16, md: 24}}>
+    <Stack py={{base: 16, md: 24}} id="clients">
       <PageHeading
         heading={<>Trusted by popular clients.</>}
         description=" "

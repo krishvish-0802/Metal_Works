@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import "./app.css"
 import App from "./App";
 
 createRoot(document.getElementById("root")!).render(

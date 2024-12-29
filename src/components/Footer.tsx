@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <Box as="footer" bg={"blackAlpha.800"}>
+    <Box as="footer" bg={"blackAlpha.800"} id='footer'>
       <Box px={12} py={8} mx={"auto"} maxW={"8xl"}>
         <SimpleGrid columns={[1, 3]} gap={12}>
           <Stack gap={4}>
@@ -17,6 +17,7 @@ const Footer = () => {
               commercial, and residential{" "}
             </Text>
           </Stack>
+          <Box></Box>
           <Stack gap={4}>
             <Text fontSize={"3xl"} color={"white"}>
               <Span color={"yellow.300"} fontWeight={"bold"}>

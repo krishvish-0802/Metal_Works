@@ -12,7 +12,7 @@ import { ReactNode } from "react";
 
 export const Service = () => {
   return (
-    <Box
+    <Box id="products"
       // height={"90vh"}
       backgroundImage={`url(${foundry})`}
       backgroundAttachment={"fixed"}
