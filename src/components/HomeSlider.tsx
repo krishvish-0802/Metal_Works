@@ -145,14 +145,15 @@ export const SliderCard = ({
         gap={12}
         p={4}
       >
-        <Heading as="h2" fontSize={"7xl"} color={"white"}>
+        <Heading as="h2" fontSize={{base:"5xl", md:"7xl"}} color={"white"} textAlign={"center"} lineHeight={"shorter"}>
           {heading}
         </Heading>
         <Text
-          letterSpacing={20}
+          letterSpacing={{base:10, md:20}}
           color={"white"}
-          fontSize={"lg"}
+          fontSize={{base:"sm", md: "lg"}}
           fontWeight={"semibold"}
+          textAlign={"center"}
         >
           {description}
         </Text>
