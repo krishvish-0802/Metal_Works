@@ -3,6 +3,11 @@
 import { Box, Heading, SimpleGrid, Stack, Span, Text, Image } from "@chakra-ui/react";
 import foundry from "../assets/images/foundry.png";
 import { PageHeading } from "./PageHeading";
+import GearBox from "../assets/images/Products/CI_gear_box.webp";
+import Motor from "../assets/images/Products/CI_motor_body.jpg";
+import Brackets from "../assets/images/Products/CI_moulded_items.jpg";
+import FPParts from "../assets/images/Products/food_processing_machined_parts.jpg";
+import TractorParts from "../assets/images/Products/Tractor_spare_parts.webp";
 import { ReactNode } from "react";
 
 export const Service = () => {
@@ -47,27 +52,27 @@ export const Service = () => {
         marginBottom={{base:0, md:10}}
       >
         <ProductCard
-          imageSrc={"src/assets/images/Products/CI_gear_box.webp"}
+          imageSrc={GearBox}
           title={"Gear box"}
           description=""
         />
         <ProductCard
-          imageSrc={"src/assets/images/Products/CI_motor_body.jpg"}
+          imageSrc={Motor}
           title={"Motor body"}
           description=""
         />
         <ProductCard
-          imageSrc={"src/assets/images/Products/CI_moulded_items.jpg"}
+          imageSrc={Brackets}
           title={"Brackets"}
           description=""
         />
         <ProductCard
-          imageSrc={"src/assets/images/Products/food_processing_machined_parts.jpg"}
+          imageSrc={FPParts}
           title={"Food processings parts"}
           description=""
         />
         <ProductCard
-          imageSrc={"src/assets/images/Products/Tractor_spare_parts.webp"}
+          imageSrc={TractorParts}
           title={"Tractor Spare Parts"}
           description=""
         />
