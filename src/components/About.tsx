@@ -13,7 +13,7 @@ export const About = () => {
       alignItems={"center"}
       py={24}
     >
-      <Image px={8} height={550} src={SliderOne} alt="About Us" />
+      <Image px={8} height={{base: 400, md: 550}} src={SliderOne} alt="About Us" />
       <Stack gap={8} px={4}>
         <PageHeading
           alignItems={"start"}
