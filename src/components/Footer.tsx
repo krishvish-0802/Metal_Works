@@ -34,7 +34,7 @@ const Footer = () => {
             Address: 123 Main St, Bengaluru East, Karnataka, India
             </Text>
             <Text fontSize="md" color="white">
-            Google Maps: <Link href="https://goo.gl/maps/example" color={"yellow.300"} isExternal>View Location</Link>
+            Google Maps: <Link href="https://goo.gl/maps/example" color={"yellow.300"} >View Location</Link>
             </Text>
           </Stack>
         </SimpleGrid>

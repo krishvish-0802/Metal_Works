@@ -24,7 +24,7 @@ export const Contact = () => {
         Address: 123 Main St, Bengaluru East, Karnataka, India
       </Text>
       <Text fontSize={"lg"} mb={2}>
-        Google Maps: <Link href="https://goo.gl/maps/example" color={"yellow.300"} isExternal>View Location</Link>
+        Google Maps: <Link href="https://goo.gl/maps/example" color={"yellow.300"} >View Location</Link>
       </Text>
     </Box>
   );
