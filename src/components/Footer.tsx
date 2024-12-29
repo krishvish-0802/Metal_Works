@@ -26,16 +26,13 @@ const Footer = () => {
               Us
             </Text>
             <Text fontSize="md" color="white">
-            Phone: +1 (123) 456-7890
+            Phone: <Link href='tel:9360098007' color={"yellow.300"}>+91 93600 98007</Link> or <Link href='tel:6369505151' color={"yellow.300"}>+91 63695 05151</Link>
             </Text>
             <Text fontSize="md" color="white">
-            Email: <Link href="mailto:info@company.com" color={"yellow.300"}>info@company.com</Link>
+            Email: <Link href="mailto:sribharathfoundry@gmail.com" color={"yellow.300"}>sribharathfoundry@gmail.com</Link>
             </Text>
             <Text fontSize="md" color="white">
-            Address: 123 Main St, Bengaluru East, Karnataka, India
-            </Text>
-            <Text fontSize="md" color="white">
-            Google Maps: <Link href="https://goo.gl/maps/example" color={"yellow.300"} >View Location</Link>
+            Address: <Link display={"inline"} href="https://maps.app.goo.gl/sLCPvSoTT5opEvA8A" color={"yellow.300"} >S.F. No. 257/1C, Pachapalayam Village, Annur Taluk, Arasur Foundry Cluster, Coimbatore - 641 653</Link>
             </Text>
           </Stack>
         </SimpleGrid>
