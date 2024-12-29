@@ -1,16 +1,15 @@
-import { Box, Heading, SimpleGrid, Span, Stack, Text, Image } from "@chakra-ui/react";
-import SliderOne from "../assets/images/slider-one.jpg";
+// 
+
+import { Box, Heading, SimpleGrid, Stack, Span, Text, Image } from "@chakra-ui/react";
+import foundry from "../assets/images/foundry.png";
 import { PageHeading } from "./PageHeading";
 import { ReactNode } from "react";
-import gearBox from "../assets/images/Products/CI_gear_box.webp";
-
-// const productArray = [cri, kubota, mahendra, zeeco, karthic, lubi]
 
 export const Service = () => {
   return (
     <Box
-      height={"90vh"}
-      backgroundImage={`url(${SliderOne})`}
+      // height={"90vh"}
+      backgroundImage={`url(${foundry})`}
       backgroundAttachment={"fixed"}
       backgroundSize={"cover"}
       pos={"relative"}
@@ -29,7 +28,7 @@ export const Service = () => {
       <PageHeading
         heading={
           <>
-            Our <Span color={"yellow.300"}>Services</Span>
+            Our <Span color={"yellow.300"}>Products</Span>
           </>
         }
         description={
@@ -42,94 +41,71 @@ export const Service = () => {
         pos={"relative"}
         zIndex={1}
         columns={[2, 3]}
-        gap={20}
+        gap={{base:4, md: 20}}
         px={{ sm: 16, md: 32 }}
         marginTop={20}
+        marginBottom={{base:0, md:10}}
       >
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
+        <ProductCard
+          imageSrc={"src/assets/images/Products/CI_gear_box.webp"}
+          title={"Gear box"}
+          description=""
         />
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
+        <ProductCard
+          imageSrc={"src/assets/images/Products/CI_motor_body.jpg"}
+          title={"Motor body"}
+          description=""
         />
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
+        <ProductCard
+          imageSrc={"src/assets/images/Products/CI_moulded_items.jpg"}
+          title={"Brackets"}
+          description=""
         />
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
+        <ProductCard
+          imageSrc={"src/assets/images/Products/food_processing_machined_parts.jpg"}
+          title={"Food processings parts"}
+          description=""
         />
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
+        <ProductCard
+          imageSrc={"src/assets/images/Products/Tractor_spare_parts.webp"}
+          title={"Tractor Spare Parts"}
+          description=""
         />
-        <ServiceCard
-          index={"01"}
-          title={
-            <>
-              <Span color={"yellow.300"}>Titanium</Span> Welding
-            </>
-          }
-          description="There are a few different processes that we use at JA"
-        />
+        {/* <ProductCard
+          imageSrc={"path/to/product-image-6.jpg"}
+          title={"Product 6"}
+          description="Description of product 6"
+        /> */}
       </SimpleGrid>
     </Box>
   );
 };
 
-interface ServiceCardProps {
-  index: string;
-  title: ReactNode;
+interface ProductCardProps {
+  imageSrc: string;
+  title: string;
   description: string;
 }
 
-export const ServiceCard = ({
-  index,
+export const ProductCard = ({
+  imageSrc,
   title,
   description,
-}: ServiceCardProps) => {
+}: ProductCardProps) => {
   return (
     <Stack maxW={"80%"} mx={"auto"} gap={2} alignItems={"center"}>
-      <Heading
-        as={"h2"}
-        color={"whiteAlpha.900"}
-        fontSize={"4xl"}
-        fontWeight={"extrabold"}
+      <Box
+        boxSize={"32"}
+        borderRadius={"md"}
+        overflow={"hidden"}
       >
-        {index}
-      </Heading>
+        <Image src={imageSrc} alt={title} width={"100%"} height={"100%"} objectFit={"cover"} />
+      </Box>
       <Heading
         as={"h2"}
         color={"whiteAlpha.900"}
-        fontSize={"3xl"}
+        fontSize={{base:"lg", md:"2xl"}}
+        textAlign={"center"}
         fontWeight={"bold"}
       >
         {title}

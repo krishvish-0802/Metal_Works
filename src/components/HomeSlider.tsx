@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
+import {Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import { Box, Heading, Span, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import SliderTwo from "../assets/images/slider-two.jpg";
@@ -15,13 +15,12 @@ export default function HomeSlider() {
         minHeight: "50vh",
       }}
       loop={true}
-      navigation={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
       speed={2000}
-      modules={[Navigation, Autoplay]}
+      modules={[Autoplay]}
       className="mySwiper"
     >
       <SwiperSlide>
@@ -116,6 +115,7 @@ export const SliderCard = ({
       height={"88vh"}
       backgroundImage={`url(${image})`}
       backgroundSize={"cover"}
+      backgroundPosition={"center"}
       pos={"relative"}
       _before={{
         content: `""`,

@@ -1,25 +1,27 @@
-import { Box, Button, Image, Link, Heading, Span } from "@chakra-ui/react";
+import { Box, Button, Image, Link, Heading, Span, useBreakpointValue } from "@chakra-ui/react";
 import Logo from "../assets/images/Swaraj Company Logo.png";
 export const Navbar = () => {
+  const isMobile = useBreakpointValue({base: true, md:false}) 
   return (
     <Box
       as={"header"}
-      paddingX={50}
+      paddingX={"4"}
       height={"12vh"}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
+      marginBottom={isMobile ? 1:2}
     >
       <Box>
-        <Image src={Logo} width={"24"} height={"24"} alt="Sri Bharath Foundry Logo" />
+        <Image src={Logo} width={isMobile ?"20":"24"} height={isMobile ?"20":"24"} alt="Sri Bharath Foundry Logo" />
       </Box>
 
       <Box>
-        <Heading fontSize= "3xl">           
-          <Span color={"blue.800"}>SRI</Span> <Span color={"blue.800"}> BHARATH </Span> <Span color={"blue.800"}>FOUNDRY</Span>
+        <Heading fontSize= {isMobile ? "xl":"4xl"} paddingRight={8}>           
+          <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
         </Heading>
       </Box>
-
+{isMobile ||
       <Box
         as="ul"
         display="flex"
@@ -53,7 +55,7 @@ export const Navbar = () => {
             Contact
           </Button>
         </Box>
-      </Box>
+      </Box>}
     </Box>
   );
 };
