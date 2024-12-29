@@ -1,5 +1,5 @@
 import { Image, SimpleGrid, Span, Stack, Text } from "@chakra-ui/react";
-import SliderOne from "../assets/images/slider-one.jpg";
+import AboutImage from "../assets/images/about.webp";
 import { PageHeading } from "./PageHeading";
 
 export const About = () => {
@@ -13,7 +13,7 @@ export const About = () => {
       alignItems={"center"}
       py={24}
     >
-      <Image px={8} height={{base: 400, md: 550}} src={SliderOne} alt="About Us" />
+      <Image px={8} height={{base: 400, md: 550}} src={AboutImage} alt="About Us" />
       <Stack gap={8} px={4}>
         <PageHeading
           alignItems={"start"}

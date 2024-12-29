@@ -1,5 +1,5 @@
 import { Box, Button, Image, Link, Heading, Span, useBreakpointValue } from "@chakra-ui/react";
-import Logo from "../assets/images/Swaraj Company Logo.png";
+import Logo from "../assets/images/logo.png";
 export const Navbar = () => {
   const isMobile = useBreakpointValue({base: true, md:false}) 
   return (
