@@ -9,7 +9,7 @@ import {
   IconButton,
   Stack,
 } from "@chakra-ui/react";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.jpg";
 import { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 
