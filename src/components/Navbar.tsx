@@ -29,7 +29,8 @@ export const Navbar = () => {
       as={"header"}
       paddingX={"4"}
       height={"12vh"}
-      minHeight={isMobile ?"60px" : "90px"}
+      minHeight={isMobile ? "65px" : "80px"}
+      maxHeight={isMobile ? "80px" : "110px"}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
@@ -48,7 +49,7 @@ export const Navbar = () => {
         </Box>
 
         <Box>
-          <Heading fontSize={isMobile ? "lg" : "3xl"}>
+          <Heading fontSize={isMobile ? "lg" : "2xl"}>
             <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
           </Heading>
         </Box>
@@ -63,7 +64,7 @@ export const Navbar = () => {
             p={0}
             zIndex={3}
           >
-            <Stack position="relative" width="30px" height="24px">
+            <Stack position="relative" width="22px" height="24px">
               <MotionBox
                 width="100%"
                 height="2px"
