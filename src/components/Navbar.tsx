@@ -29,6 +29,7 @@ export const Navbar = () => {
       as={"header"}
       paddingX={"4"}
       height={"12vh"}
+      minHeight={isMobile ?"60px" : "90px"}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
@@ -36,20 +37,22 @@ export const Navbar = () => {
       pos={show ? "fixed" : "relative"}
       zIndex={4}
     >
-      <Box>
-        <Image
-          src={Logo}
-          width={isMobile ? "20" : "24"}
-          height={isMobile ? "20" : "24"}
-          alt="Sri Bharath Foundry Logo"
-        />
-      </Box>
+      <Stack flexDir={"row"} gap={"10px"} alignItems={"center"}>
+        <Box>
+          <Image
+            src={Logo}
+            width={isMobile ? "16" : "24"}
+            height={isMobile ? "16" : "24"}
+            alt="Sri Bharath Foundry Logo"
+          />
+        </Box>
 
-      <Box>
-        <Heading fontSize={isMobile ? "xl" : "4xl"} paddingRight={8}>
-          <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
-        </Heading>
-      </Box>
+        <Box>
+          <Heading fontSize={isMobile ? "lg" : "4xl"}>
+            <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
+          </Heading>
+        </Box>
+      </Stack>
       {isMobile && (
         <>
           <IconButton

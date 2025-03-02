@@ -1,11 +1,11 @@
-import { Box, SimpleGrid, Span, Stack, Text, Link } from '@chakra-ui/react'
-import React from 'react'
+import { Box, SimpleGrid, Span, Stack, Text, Link } from "@chakra-ui/react";
+import React from "react";
 
 const Footer = () => {
   return (
     <Box as="footer" bg={"blackAlpha.800"} id="footer">
       <Box px={12} py={8} mx={"auto"} maxW={"8xl"}>
-        <SimpleGrid columns={[1, 3]} gap={12}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={12}>
           <Stack gap={4}>
             <Text fontSize="xl" color="white">
               SRI BHARATH FOUNDRY
@@ -20,7 +20,7 @@ const Footer = () => {
               make us a trusted name in the industry.
             </Text>
           </Stack>
-          <Box></Box>
+          <Box display={{ base: "none", md: "none", lg: "block" }}></Box>
           <Stack gap={4}>
             <Text fontSize={"3xl"} color={"white"}>
               <Span color={"yellow.300"} fontWeight={"bold"}>
@@ -63,6 +63,6 @@ const Footer = () => {
       </Box>
     </Box>
   );
-}
+};
 
-export default Footer
+export default Footer;
