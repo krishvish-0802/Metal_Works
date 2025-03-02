@@ -41,14 +41,14 @@ export const Navbar = () => {
         <Box>
           <Image
             src={Logo}
-            width={isMobile ? "16" : "24"}
-            height={isMobile ? "16" : "24"}
+            width={isMobile ? "16" : "20"}
+            height={isMobile ? "16" : "20"}
             alt="Sri Bharath Foundry Logo"
           />
         </Box>
 
         <Box>
-          <Heading fontSize={isMobile ? "lg" : "4xl"}>
+          <Heading fontSize={isMobile ? "lg" : "3xl"}>
             <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
           </Heading>
         </Box>
