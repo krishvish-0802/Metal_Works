@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Box, Heading, Span, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import SliderOne from "../assets/images/slider-one.jpg";
 import SliderTwo from "../assets/images/slider-two.jpg";
 // import SliderThree from "../assets/images/slider-three.jpg";
@@ -27,12 +27,18 @@ export default function HomeSlider() {
         <SliderCard
           heading={
             <>
-              <Span color={"yellow.300"}>Shape</Span> Your Own <Span color={"yellow.300"}>Mold</Span>
+              <Text as={"span"} color={"yellow.300"}>
+                Shape
+              </Text>{" "}
+              Your Own{" "}
+              <Text as={"span"} color={"yellow.300"}>
+                Mold
+              </Text>
             </>
           }
           description={
             <>
-              YOU IMAGINE, <Span color={"yellow.300"}>WE BUILD.</Span>
+              YOU IMAGINE, <Text color={"yellow.300"}>WE BUILD.</Text>
             </>
           }
           image={SliderOne}
@@ -69,12 +75,21 @@ export default function HomeSlider() {
         <SliderCard
           heading={
             <>
-              <Span color={"yellow.300"}>Casting</Span> Grey Cast <Span color={"yellow.300"}>Iron</Span>
+              <Text as={"span"} color={"yellow.300"}>
+                Casting
+              </Text>{" "}
+              Grey Cast{" "}
+              <Text as={"span"} color={"yellow.300"}>
+                Iron
+              </Text>
             </>
           }
           description={
             <>
-              TOUGH, <Span color={"yellow.300"}>ROUGH CASTINGS</Span>
+              TOUGH,{" "}
+              <Text as={"span"} color={"yellow.300"}>
+                ROUGH CASTINGS
+              </Text>
             </>
           }
           image={SliderTwo}
@@ -145,13 +160,19 @@ export const SliderCard = ({
         gap={12}
         p={4}
       >
-        <Heading as="h2" fontSize={{base:"5xl", md:"7xl"}} color={"white"} textAlign={"center"} lineHeight={"shorter"}>
+        <Heading
+          as="h2"
+          fontSize={{ base: "5xl", md: "7xl" }}
+          color={"white"}
+          textAlign={"center"}
+          lineHeight={"shorter"}
+        >
           {heading}
         </Heading>
         <Text
-          letterSpacing={{base:10, md:20}}
+          letterSpacing={{ base: 10, md: 20 }}
           color={"white"}
-          fontSize={{base:"sm", md: "lg"}}
+          fontSize={{ base: "sm", md: "lg" }}
           fontWeight={"semibold"}
           textAlign={"center"}
         >

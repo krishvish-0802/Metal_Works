@@ -1,4 +1,4 @@
-import { Image, SimpleGrid, Span, Stack, Text } from "@chakra-ui/react";
+import { Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import AboutImage from "../assets/images/about.webp";
 import { PageHeading } from "./PageHeading";
 
@@ -25,7 +25,10 @@ export const About = () => {
           alignItems={"start"}
           heading={
             <>
-              About <Span color={"yellow.300"}>Us</Span>
+              About{" "}
+              <Text as={"span"} color={"yellow.300"}>
+                Us
+              </Text>
             </>
           }
           headingProps={{ fontSize: "5xl", color: "blackAlpha.900" }}

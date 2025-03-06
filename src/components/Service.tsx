@@ -1,6 +1,6 @@
-// 
+//
 
-import { Box, Heading, SimpleGrid, Stack, Span, Text, Image } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack, Text, Image } from "@chakra-ui/react";
 import foundry from "../assets/images/foundry.png";
 import { PageHeading } from "./PageHeading";
 import GearBox from "../assets/images/Products/CI_gear_box.webp";
@@ -8,11 +8,11 @@ import Motor from "../assets/images/Products/CI_motor_body.jpg";
 import Brackets from "../assets/images/Products/CI_moulded_items.jpg";
 import FPParts from "../assets/images/Products/food_processing_machined_parts.jpg";
 import TractorParts from "../assets/images/Products/Tractor_spare_parts.webp";
-import { ReactNode } from "react";
 
 export const Service = () => {
   return (
-    <Box id="products"
+    <Box
+      id="products"
       // height={"90vh"}
       backgroundImage={`url(${foundry})`}
       backgroundAttachment={"fixed"}
@@ -33,12 +33,18 @@ export const Service = () => {
       <PageHeading
         heading={
           <>
-            Our <Span color={"yellow.300"}>Products</Span>
+            Our{" "}
+            <Text as="span" color={"yellow.300"}>
+              Products
+            </Text>
           </>
         }
         description={
           <>
-            WE BUILD <Span color={"yellow.300"}>THE BEST.</Span>
+            WE BUILD{" "}
+            <Text as="span" color={"yellow.300"}>
+              THE BEST.
+            </Text>
           </>
         }
       />
@@ -46,26 +52,14 @@ export const Service = () => {
         pos={"relative"}
         zIndex={1}
         columns={[2, 3]}
-        gap={{base:4, md: 20}}
+        gap={{ base: 4, md: 20 }}
         px={{ sm: 16, md: 32 }}
         marginTop={20}
-        marginBottom={{base:0, md:10}}
+        marginBottom={{ base: 0, md: 10 }}
       >
-        <ProductCard
-          imageSrc={GearBox}
-          title={"Gear box"}
-          description=""
-        />
-        <ProductCard
-          imageSrc={Motor}
-          title={"Motor body"}
-          description=""
-        />
-        <ProductCard
-          imageSrc={Brackets}
-          title={"Brackets"}
-          description=""
-        />
+        <ProductCard imageSrc={GearBox} title={"Gear box"} description="" />
+        <ProductCard imageSrc={Motor} title={"Motor body"} description="" />
+        <ProductCard imageSrc={Brackets} title={"Brackets"} description="" />
         <ProductCard
           imageSrc={FPParts}
           title={"Food processings parts"}
@@ -99,17 +93,19 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Stack maxW={"80%"} mx={"auto"} gap={2} alignItems={"center"}>
-      <Box
-        boxSize={"32"}
-        borderRadius={"md"}
-        overflow={"hidden"}
-      >
-        <Image src={imageSrc} alt={title} width={"100%"} height={"100%"} objectFit={"cover"} />
+      <Box boxSize={"32"} borderRadius={"md"} overflow={"hidden"}>
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={"100%"}
+          height={"100%"}
+          objectFit={"cover"}
+        />
       </Box>
       <Heading
         as={"h2"}
         color={"whiteAlpha.900"}
-        fontSize={{base:"lg", md:"2xl"}}
+        fontSize={{ base: "lg", md: "2xl" }}
         textAlign={"center"}
         fontWeight={"bold"}
       >

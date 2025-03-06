@@ -4,10 +4,10 @@ import {
   Image,
   Link,
   Heading,
-  Span,
   useBreakpointValue,
   IconButton,
   Stack,
+  Text,
 } from "@chakra-ui/react";
 import Logo from "../assets/images/logo.jpg";
 import { useCallback, useState } from "react";
@@ -50,7 +50,9 @@ export const Navbar = () => {
 
         <Box>
           <Heading fontSize={isMobile ? "lg" : "2xl"}>
-            <Span color={"blue.800"}>SRI BHARATH FOUNDRY</Span>
+            <Text as="span" color={"blue.800"}>
+              SRI BHARATH FOUNDRY
+            </Text>
           </Heading>
         </Box>
       </Stack>
@@ -63,6 +65,7 @@ export const Navbar = () => {
             backgroundColor={"transparent"}
             p={0}
             zIndex={3}
+            aria-label={""}
           >
             <Stack position="relative" width="22px" height="24px">
               <MotionBox
@@ -209,7 +212,12 @@ export const Navbar = () => {
           </Box>
           <Box as="li" paddingX={2}>
             <Link as="a" href="#footer" textDecoration="none" color="gray.600">
-              <Button colorScheme="teal" variant="solid">
+              <Button
+                bg={"blackAlpha.900"}
+                color={"whiteAlpha.900"}
+                variant="solid"
+                _hover={{ bg: "yellow.300", color: "blackAlpha.900" }}
+              >
                 Contact
               </Button>
             </Link>

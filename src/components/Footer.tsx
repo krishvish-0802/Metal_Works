@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Span, Stack, Text, Link } from "@chakra-ui/react";
+import { Box, SimpleGrid, Stack, Text, Link } from "@chakra-ui/react";
 import React from "react";
 
 const Footer = () => {
@@ -23,9 +23,9 @@ const Footer = () => {
           <Box display={{ base: "none", md: "none", lg: "block" }}></Box>
           <Stack gap={4}>
             <Text fontSize={"3xl"} color={"white"}>
-              <Span color={"yellow.300"} fontWeight={"bold"}>
+              <Text as={"span"} color={"yellow.300"} fontWeight={"bold"}>
                 Contact
-              </Span>{" "}
+              </Text>{" "}
               Us
             </Text>
             <Text fontSize="md" color="white">
