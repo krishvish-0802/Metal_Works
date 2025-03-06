@@ -1,7 +1,26 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./pages/Home";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoading = () => {
+      setLoading(false);
+    };
+
+    window.addEventListener("load", handleLoading);
+
+    return () => {
+      window.removeEventListener("load", handleLoading);
+    };
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <BrowserRouter>
       <Routes>

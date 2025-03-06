@@ -7,7 +7,9 @@ import App from "./App";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ChakraProvider
-      theme={extendTheme({ config: { initialColorMode: "dark" } })}
+      theme={extendTheme({
+        config: { initialColorMode: "light", useSystemColorMode: false },
+      })}
     >
       <App />
     </ChakraProvider>
