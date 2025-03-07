@@ -31,6 +31,8 @@ export const ContactSection = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [loading, setLoading] = useState(false);
 
+  const [showText, setShowText] = useState(false);
+
   const validateForm = () => {
     const newErrors: Partial<FormData> = {};
 
@@ -68,9 +70,9 @@ export const ContactSection = () => {
       if (Object.keys(newErrors).length === 0) {
         setLoading(true);
         try {
-          const serviceId = "service_id";
-          const templateId = "template_id";
-          const publicKey = "public_key";
+          const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
+          const templateId = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+          const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
 
           const emailParams = {
             name: formData.name,
@@ -82,6 +84,10 @@ export const ContactSection = () => {
           await emailjs.send(serviceId, templateId, emailParams, publicKey);
 
           setLoading(false);
+          setShowText(true);
+          setTimeout(() => {
+            setShowText(false);
+          }, 2000);
           setFormData({
             name: "",
             email: "",
@@ -90,7 +96,6 @@ export const ContactSection = () => {
           });
         } catch (error) {
           setLoading(false);
-          console.error("Failed to send message", error);
         }
       } else {
         setErrors(newErrors);
@@ -192,10 +197,11 @@ export const ContactSection = () => {
                 loadingText="Sending"
                 bg={"blackAlpha.900"}
                 color={"whiteAlpha.900"}
+                isDisabled={loading || showText}
                 variant="solid"
                 _hover={{ bg: "yellow.300", color: "blackAlpha.900" }}
               >
-                Send Message
+                {showText ? "Thank you" : "Send Message"}
               </Button>
             </Stack>
           </form>
